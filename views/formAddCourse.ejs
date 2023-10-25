@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>formAddCourse</title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs') %>
+
+    <form class="new-course-box" action="<%= action %>" method="post">
+      <label for="new-course">New Course:</label>
+      <input class="new-course-add" type="text" name="name" id="name" />
+
+      <label for="price">Price:</label>
+      <input class="new-course-add" type="number" name="price" id="price" />
+
+      <label for="url">Image url:</label>
+      <input class="new-course-add" type="url" name="img" id="course-img" />
+      <button class="submit-course" type="submit">Confirm</button>
+    </form>
+  </body>
+</html>

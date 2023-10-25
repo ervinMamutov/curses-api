@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs') %>
+    <form class="form-box" action="<%= action %>" method="post">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" />
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password-one" />
+
+      <% if (button === 'Sign up') { %>
+      <label for="password">Confirm Password:</label>
+      <input type="password" name="confirmPassword" id="password-two" />
+      <% } %>
+
+      <button type="submit"><%= button %></button>
+    </form>
+  </body>
+</html>

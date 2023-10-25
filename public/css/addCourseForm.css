@@ -1,0 +1,15 @@
+.new-course-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+}
+
+.submit-course {
+  margin-top: 0.625rem;
+}
+
+.new-course-add {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}

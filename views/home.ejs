@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Courses</title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs') %>
+    <div class="courses__container">
+      <% if (courses) { %> <% courses.forEach(course => { %>
+      <div class="course-box">
+        <h1 class="title"><%= course.name %></h1>
+        <img
+          class="course-img"
+          src="<%= course.img %>"
+          alt="<%= course.name %>"
+        />
+        <h2 class="price">$<%= course.price %></h2>
+      </div>
+      <% }) %> <% } %>
+    </div>
+  </body>
+</html>
